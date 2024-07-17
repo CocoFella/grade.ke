@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/home/user/itzdom/download.jfif" type="image/x-icon">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" style="background-color: #007BFF;"">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#create-profile">Create Profile</a></li>
+                <li><a href="#grades">Manage Grades</a></li>
+                <li><a href="#transcript">Transcript</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div id="home" class="page active">
+                <h1>Welcome to Grade Calculator</h1>
+                <div id="clock" class="clock"></div>
+                <div id="calendar"></div>
+            </div>
+            <div id="create-profile" class="page">
+                <h1>Create Profile</h1>
+                <form id="profile-form">
+                    <label for="profile-name">Name:</label>
+                    <input type="text" id="profile-name" required>
+                    <label for="profile-age">Age:</label>
+                    <input type="number" id="profile-age" required>
+                    <label for="profile-dob">Date of Birth:</label>
+                    <input type="date" id="profile-dob" required>
+                    <label for="profile-form">Form (1-4):</label>
+                    <input type="number" id="profile-form" min="1" max="4" required>
+                    <label for="profile-gender">Gender:</label>
+                    <select id="profile-gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="profile-email">Email:</label>
+                    <input type="email" id="profile-email" required>
+                    <button type="submit">Create Profile</button>
+                </form>
+                <div id="profiles-list"></div>
+            </div>
+            <div id="grades" class="page">
+                <h1>Manage Grades</h1>
+                <form id="grade-settings">
+                    <label for="profile-selector">Select Profile:</label>
+                    <select id="profile-selector" required></select>
+                    <label for="grade-form">Form:</label>
+                    <select id="grade-form" required>
+                        <option value="1">Form 1</option>
+                        <option value="2">Form 2</option>
+                        <option value="3">Form 3</option>
+                        <option value="4">Form 4</option>
+                    </select>
+                    <label for="grade-term">Term:</label>
+                    <select id="grade-term" required>
+                        <option value="1">Term 1</option>
+                        <option value="2">Term 2</option>
+                        <option value="3">Term 3</option>
+                    </select>
+                    <label for="grade-exam">Exam:</label>
+                    <select id="grade-exam" required>
+                        <option value="1">OPENER</option>
+                        <option value="2">NIDTERM</option>
+                        <option value="3">ENDTERM</option>
+                    </select>
+                    <button type="submit">Set Grades</button>
+                </form>
+                <div id="grades-container">
+                    <!-- Grade input fields will be added here -->
+                </div>
+            </div>
+            <div id="transcript" class="page">
+                <h1>Transcript</h1>
+                <label for="transcript-profile-selector">Select Profile:</label>
+                <select id="transcript-profile-selector" required></select>
+                <button id="generate-transcript">Generate Transcript</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
